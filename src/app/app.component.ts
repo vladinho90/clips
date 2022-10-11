@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, isDevMode} from '@angular/core';
 import {AuthService} from './services/auth.service';
 
 @Component({
@@ -9,5 +9,8 @@ import {AuthService} from './services/auth.service';
 export class AppComponent {
 
   constructor(public auth: AuthService) {
+
+      console.log(isDevMode());
+
   }
 }
